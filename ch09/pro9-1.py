@@ -6,7 +6,7 @@ def construct_yolo_v3():    # 사전 학습 모델을 읽어 YOLO 구성
     f=open('ch09/coco_names.txt', 'r')
     class_names = [line.strip() for line in f.readlines()]
 
-    model = cv.dnn.readNet('ch09/yolov3.weights', 'ch09/yolov3.cfg')
+    model = cv.dnn.readNet('ch09/yolov3.weights', 'ch09/yolov3.cfg')    # weights는 248MB라서 git push가 안됨
     # layer_names = model.getLayerNames()
     out_layers = model.getUnconnectedOutLayersNames()
 
